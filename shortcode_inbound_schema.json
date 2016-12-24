@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Message360": {
+      "type": "object",
+      "properties": {
+        "ResponseStatus": {
+          "type": "integer"
+        },
+        "MessageCount": {
+          "type": "integer"
+        },
+        "Page": {
+          "type": "string"
+        },
+        "PageSize": {
+          "type": "string"
+        },
+        "Messages": {
+          "type": "object",
+          "properties": {
+            "Message": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "MessageSid": {
+                    "type": "string"
+                  },
+                  "To": {
+                    "type": "string"
+                  },
+                  "From": {
+                    "type": "string"
+                  },
+                  "Body": {
+                    "type": "string"
+                  },
+                  "MessagePrice": {
+                    "type": "string"
+                  },
+                  "DateReceived": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "MessageSid",
+                  "To",
+                  "From",
+                  "Body",
+                  "MessagePrice",
+                  "DateReceived"
+                ]
+              }
+            }
+          },
+          "required": [
+            "Message"
+          ]
+        }
+      },
+      "required": [
+        "ResponseStatus",
+        "MessageCount",
+        "Page",
+        "PageSize",
+        "Messages"
+      ]
+    }
+  },
+  "required": [
+    "Message360"
+  ]
+}
