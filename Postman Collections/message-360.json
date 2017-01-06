@@ -1962,8 +1962,8 @@
             "auth": {
               "type": "basic",
               "basic": {
-                "username": "ffb10973-c00d-3b86-b35d-753396d98a33",
-                "password": "298b1cb2de2a5cb3e7ec940a25f943c2",
+                "username": "{{user}}",
+                "password": "{{pass}}",
                 "saveHelperData": true,
                 "showPassword": false
               }
@@ -1973,7 +1973,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
                 "description": ""
               }
             ],
