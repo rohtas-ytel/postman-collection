@@ -1619,7 +1619,7 @@
               "type": "basic",
               "basic": {
                 "username": "{{user}}",
-                "password": "{{matt_pass}}",
+                "password": "{{pass}}",
                 "saveHelperData": true,
                 "showPassword": false
               }
