@@ -1618,8 +1618,8 @@
             "auth": {
               "type": "basic",
               "basic": {
-                "username": "{{kallace_user}}",
-                "password": "{{kallace_pass}}",
+                "username": "{{saangeth-user}}",
+                "password": "{{saangeth-pass}}",
                 "saveHelperData": true,
                 "showPassword": false
               }
@@ -1638,13 +1638,13 @@
               "formdata": [
                 {
                   "key": "productcode",
-                  "value": "0",
+                  "value": "1",
                   "type": "text",
                   "enabled": true
                 },
                 {
                   "key": "startdate",
-                  "value": "2016-01-01",
+                  "value": "2017-01-01",
                   "type": "text",
                   "enabled": true
                 },
