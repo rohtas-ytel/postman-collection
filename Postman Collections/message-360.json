@@ -1,0 +1,2551 @@
+{
+  "variables": [],
+  "info": {
+    "name": "message-360",
+    "_postman_id": "368da9e3-3c27-6929-baeb-2cb71ec98433",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "22e9f01c-3565-6f49-25c1-7f194961252e",
+      "name": "Carrier",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "43d10c5b-2b13-fe58-e3d6-6dd298523383",
+          "name": "lookup",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/carrier/lookup.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOiBmY2RjMGRjZGNiNjAzZjA3ZDE3MTE1YzFmODc5ZTQ5MyA=",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "phonenumber",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "2a33f179-fe44-23da-e5ea-f14108403d45",
+      "name": "Recording",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "29b0d9a3-a90b-4e4a-497a-8cf5e6fe7abc",
+          "name": "Delete Recording",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/recording/deleterecording.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "RecordingSid",
+                  "value": "sssss",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3a0bad17-7bb7-0dea-26a0-1cd729285e54",
+          "name": "ViewRecording",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/recording/viewrecording.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "recordingsid",
+                  "value": "jsakdjksd",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "301df640-b16d-5fe1-8e3e-192bbd710269",
+      "name": "Template",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "b64fa9cb-e539-29ff-e969-99f8701dbf23",
+          "name": "Create Template",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/template/create.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "shortcode",
+                  "value": "69677",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "HI {name}, there how are u? i will give u {amount} in cash",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "type",
+                  "value": "Notification_Type",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "name",
+                  "value": "Greeting",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "parameters",
+                  "value": "{name}",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1a72c1d8-f001-1b14-9eb2-e9e27074ea98",
+          "name": "View Template",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/template/view.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "templateid",
+                  "value": "4c84cdf0-b528-11e6-b1e3-c79810bb5a4b",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "008f51b2-89cc-7d2d-220a-8c20e76807da",
+          "name": "List Template",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/template/lists.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "pagesize",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "75e1e7c7-de76-44f0-c047-9a89086e6f0f",
+          "name": "delete Template",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/template/delete.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "templateid",
+                  "value": "c3700630-ad4b-11e6-b1e3-c79810bb5a4b",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "34286d70-c548-5d27-9382-f2661b83bc3f",
+      "name": "Shortcode",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "184eae90-fe65-7cdd-bc2b-a77866444d22",
+          "name": "Send Sms",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/shortcode/sendsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "shortcode",
+                  "value": "69677",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "templateid",
+                  "value": "695c1b30-bdd0-11e6-abbe-071edb323773",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "to",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "tocountrycode",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "messagestatuscallback",
+                  "value": "http://requestb.in/1kx8obh1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "data[product]",
+                  "value": "a",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "data[companyname]",
+                  "value": "b",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "data[price]",
+                  "value": "v",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "data[code]",
+                  "value": "c",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "49dab9c2-07e3-3ec9-26a1-3aeb2b7b31b1",
+          "name": "List Inbound Sms copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var response_status = responseCode.code;",
+                  "tests['Response staus is 200'] = (response_status==200);",
+                  "if(response_status==200){",
+                  "   if(responseHeaders.hasOwnProperty(\"Content-Type\")){",
+                  "        var request_url=request['url'];",
+                  "        var extension=request_url.split('.');",
+                  "        extension= extension[extension.length-1];",
+                  "        var jsonObject;",
+                  "        var content_type = responseHeaders['Content-Type'];",
+                  "         console.log('Content_Type : '+content_type);",
+                  "        if(extension=='json') {",
+                  "         tests['Appication has Json type']=content_type.has(\"application/json\");",
+                  "         // Apllication has content valid json content",
+                  "         if(content_type.has(\"application/json\")) {",
+                  "            jsonObject = JSON.parse(responseBody); ",
+                  "         } ",
+                  "       }else if(extension=='xml') {",
+                  "           tests['Appication has Xml type']=content_type.has(\"application/xml\");",
+                  "             // Apllication has content valid xml content",
+                  "           if(content_type.has(\"application/xml\")) {",
+                  "                jsonObject = xml2Json(responseBody);",
+                  "           }",
+                  "       } ",
+                  "       if(jsonObject) {",
+                  "           if(jsonObject.Message360===undefined) {",
+                  "              tests['Invalid Response in content'] = false;",
+                  "           } else {",
+                  "                tests['Invalid Response in Message360 Valid Response'] = true;",
+                  "                var message360response= jsonObject.Message360.ResponseStatus;",
+                  "                if(message360response) {",
+                  "                    tests['Message Response Status == 1'] =(message360response==1);",
+                  "                    // Do Basic coding",
+                  "                    messagecount = jsonObject.Message360.MessageCount;",
+                  "                    messages     = jsonObject.Message360.Messages.Message;",
+                  "                    tests['Message length match '] = (messagecount==messages.length); ",
+                  "                    var schema = {\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"description\":\"Modified JSON Schema draft v4 that includes the optional '$ref' and 'format'\",\"definitions\":{\"schemaArray\":{\"type\":\"array\",\"minItems\":1,\"items\":{\"$ref\":\"#\"}},\"positiveInteger\":{\"type\":\"integer\",\"minimum\":0},\"positiveIntegerDefault0\":{\"allOf\":[{\"$ref\":\"#/definitions/positiveInteger\"},{\"default\":0}]},\"simpleTypes\":{\"enum\":[\"array\",\"boolean\",\"integer\",\"null\",\"number\",\"object\",\"string\"]},\"stringArray\":{\"type\":\"array\",\"items\":{\"type\":\"string\"},\"minItems\":1,\"uniqueItems\":true}},\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\",\"format\":\"uri\"},\"$schema\":{\"type\":\"string\",\"format\":\"uri\"},\"$ref\":{\"type\":\"string\"},\"format\":{\"type\":\"string\"},\"title\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"default\":{},\"multipleOf\":{\"type\":\"number\",\"minimum\":0,\"exclusiveMinimum\":true},\"maximum\":{\"type\":\"number\"},\"exclusiveMaximum\":{\"type\":\"boolean\",\"default\":false},\"minimum\":{\"type\":\"number\"},\"exclusiveMinimum\":{\"type\":\"boolean\",\"default\":false},\"maxLength\":{\"$ref\":\"#/definitions/positiveInteger\"},\"minLength\":{\"$ref\":\"#/definitions/positiveIntegerDefault0\"},\"pattern\":{\"type\":\"string\",\"format\":\"regex\"},\"additionalItems\":{\"anyOf\":[{\"type\":\"boolean\"},{\"$ref\":\"#\"}],\"default\":{}},\"items\":{\"anyOf\":[{\"$ref\":\"#\"},{\"$ref\":\"#/definitions/schemaArray\"}],\"default\":{}},\"maxItems\":{\"$ref\":\"#/definitions/positiveInteger\"},\"minItems\":{\"$ref\":\"#/definitions/positiveIntegerDefault0\"},\"uniqueItems\":{\"type\":\"boolean\",\"default\":false},\"maxProperties\":{\"$ref\":\"#/definitions/positiveInteger\"},\"minProperties\":{\"$ref\":\"#/definitions/positiveIntegerDefault0\"},\"required\":{\"$ref\":\"#/definitions/stringArray\"},\"additionalProperties\":{\"anyOf\":[{\"type\":\"boolean\"},{\"$ref\":\"#\"}],\"default\":{}},\"definitions\":{\"type\":\"object\",\"additionalProperties\":{\"$ref\":\"#\"},\"default\":{}},\"properties\":{\"type\":\"object\",\"additionalProperties\":{\"$ref\":\"#\"},\"default\":{}},\"patternProperties\":{\"type\":\"object\",\"additionalProperties\":{\"$ref\":\"#\"},\"default\":{}},\"dependencies\":{\"type\":\"object\",\"additionalProperties\":{\"anyOf\":[{\"$ref\":\"#\"},{\"$ref\":\"#/definitions/stringArray\"}]}},\"enum\":{\"type\":\"array\",\"minItems\":1,\"uniqueItems\":true},\"type\":{\"anyOf\":[{\"$ref\":\"#/definitions/simpleTypes\"},{\"type\":\"array\",\"items\":{\"$ref\":\"#/definitions/simpleTypes\"},\"minItems\":1,\"uniqueItems\":true}]},\"allOf\":{\"$ref\":\"#/definitions/schemaArray\"},\"anyOf\":{\"$ref\":\"#/definitions/schemaArray\"},\"oneOf\":{\"$ref\":\"#/definitions/schemaArray\"},\"not\":{\"$ref\":\"#\"}},\"dependencies\":{\"exclusiveMaximum\":[\"maximum\"],\"exclusiveMinimum\":[\"minimum\"]},\"default\":{}};",
+                  "                     var schema_validate= tv4.validate(jsonObject, schema);",
+                  "                     tests[\"schema validated\"] = schema_validate;  ",
+                  "                     if(schema_validate) {",
+                  "                        if(postman.getEnvironmentVariable(\"shortcode-min-listing\")===undefined)  {",
+                  "                            postman.setEnvironmentVariable(\"shortcode-min-listing\",'0');  ",
+                  "                            postman.setEnvironmentVariable(\"shortcode-max-listing\",messages.length-1);",
+                  "                            console.log(postman.getEnvironmentVariable(\"shortcode-min-listing\"));",
+                  "                        }",
+                  "                        console.log();",
+                  "                        ",
+                  "                        if(postman.getEnvironmentVariable(\"shortcode-min-listing\")==postman.getEnvironmentVariable(\"shortcode-max-listing\")) {",
+                  "                            postman.clearEnvironmentVariable(\"shortcode-min-listing\");",
+                  "                            postman.clearEnvironmentVariable(\"shortcode-max-listing\");",
+                  "                            postman.clearEnvironmentVariable(\"messagesid\");",
+                  "                             postman.setNextRequest('');",
+                  "                        } else {",
+                  "                             postman.setEnvironmentVariable(\"messagesid\",messages[postman.getEnvironmentVariable(\"shortcode-min-listing\")].MessageSid);",
+                  "                              postman.setEnvironmentVariable(\"shortcode-min-listing\",parseInt(postman.getEnvironmentVariable(\"shortcode-min-listing\"))+1);",
+                  "                            postman.setNextRequest(\"View Sms\");",
+                  "                        }",
+                  "                         ",
+                  "                     }",
+                  "                } else {",
+                  "                    tests['Message Response Status == 0'] =(message360response===0);     // Do Message fail validation",
+                  "                    var schema = {\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"Message360\":{\"type\":\"object\",\"properties\":{\"ResponseStatus\":{\"type\":\"integer\"},\"Errors\":{\"type\":\"object\",\"properties\":{\"Error\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"Code\":{\"type\":\"string\"},\"Message\":{\"type\":\"string\"},\"MoreInfo\":{\"type\":\"array\",\"items\":{}}},\"required\":[\"Code\",\"Message\",\"MoreInfo\"]}}},\"required\":[\"Error\"]}},\"required\":[\"ResponseStatus\",\"Errors\"]}},\"required\":[\"Message360\"]};",
+                  "                      var schema_validate= tv4.validate(jsonObject, schema);",
+                  "                     tests[\"schema Error validated\"] = schema_validate;  ",
+                  "           ",
+                  "                }",
+                  "                // Do end testing coding",
+                  "           }",
+                  "       } else {",
+                  "            tests['Invalid Response in Actual content'] = false;",
+                  "       }",
+                  "       ",
+                  "   }",
+                  "}",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/shortcode/getinboundsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "shortcode",
+                  "value": "411411",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "from",
+                  "value": "7798622731",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "pagesize",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "datesent",
+                  "value": "2016-11-26",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "520dc755-d504-c599-82ba-f0eb51757e01",
+          "name": "List Sms",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/shortcode/listsms.xml",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "shortcode",
+                  "value": "411411",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "to",
+                  "value": "7798622731",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "pagesize",
+                  "value": "10",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "datesent",
+                  "value": "2016-11-26",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f55f8003-8354-73d9-6825-d57151a665ea",
+          "name": "View Sms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  " postman.setNextRequest(\"List Inbound Sms\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/shortcode/viewsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "messagesid",
+                  "value": "{{MessageSid}}",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "42e55656-8d3c-9e2d-5403-f00605b7ea3e",
+      "name": "Account",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "39fbcd48-cda9-d2cd-9779-2d364c4bc7ab",
+          "name": "View Accounts",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/accounts/viewaccount.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "date",
+                  "value": "2016-11-28",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "480f3a3e-f448-3d80-3a18-a0f6dc04b062",
+      "name": "Transcription",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "06c670be-30c2-0732-df1a-01bdc9ba9adc",
+          "name": "view Transcription",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/transcriptions/viewtranscription.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "TranscriptionSid",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "a666b074-29d6-90a2-d26d-631c0f69dc7f",
+      "name": "Number",
+      "description": "MESAPI-975",
+      "item": [
+        {
+          "_postman_id": "93acb07f-356c-593c-e94a-ccf6ddf81eab",
+          "name": "ListIncoming Phone number",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var response_status = responseCode.code;",
+                  "tests['Response staus is 200'] = (response_status==200);",
+                  "if(response_status==200){",
+                  "   if(responseHeaders.hasOwnProperty(\"Content-Type\")){",
+                  "        var request_url=request['url'];",
+                  "        var extension=request_url.split('.');",
+                  "        extension= extension[extension.length-1];",
+                  "        var jsonObject;",
+                  "        var content_type = responseHeaders['Content-Type'];",
+                  "         console.log('Content_Type : '+content_type);",
+                  "        if(extension=='json') {",
+                  "         tests['Appication has Json type']=content_type.has(\"application/json\");",
+                  "         // Apllication has content valid json content",
+                  "         if(content_type.has(\"application/json\")) {",
+                  "            jsonObject = JSON.parse(responseBody); ",
+                  "         } ",
+                  "       }else if(extension=='xml') {",
+                  "           tests['Appication has Xml type']=content_type.has(\"application/xml\");",
+                  "             // Apllication has content valid xml content",
+                  "           if(content_type.has(\"application/xml\")) {",
+                  "                jsonObject = xml2Json(responseBody);",
+                  "           }",
+                  "       } ",
+                  "       if(jsonObject) {",
+                  "           if(jsonObject.Message360===undefined) {",
+                  "              tests['Invalid Response in content'] = false;",
+                  "           } else {",
+                  "                tests['Invalid Response in Message360 Valid Response'] = true;",
+                  "                var message360response= jsonObject.Message360.ResponseStatus;",
+                  "                if(message360response) {",
+                  "                    tests['Message Response Status == 1'] =(message360response==1);",
+                  "                    // Do Basic coding",
+                  "                    PhoneCount = jsonObject.Message360.PhoneCount;",
+                  "                    Phones     = jsonObject.Message360.Phones.Phone;",
+                  "                    tests['Number length match '] = (PhoneCount==Phones.length); ",
+                  "                } else {",
+                  "                    tests['Message Response Status == 0'] =(message360response===0);     // Do Message fail validation",
+                  "                    var schema = {\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"Message360\":{\"type\":\"object\",\"properties\":{\"ResponseStatus\":{\"type\":\"integer\"},\"Errors\":{\"type\":\"object\",\"properties\":{\"Error\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"Code\":{\"type\":\"string\"},\"Message\":{\"type\":\"string\"},\"MoreInfo\":{\"type\":\"array\",\"items\":{}}},\"required\":[\"Code\",\"Message\",\"MoreInfo\"]}}},\"required\":[\"Error\"]}},\"required\":[\"ResponseStatus\",\"Errors\"]}},\"required\":[\"Message360\"]};",
+                  "                      var schema_validate= tv4.validate(jsonObject, schema);",
+                  "                     tests[\"schema Error validated\"] = schema_validate;  ",
+                  "                }",
+                  "                // Do end testing coding",
+                  "           }",
+                  "       } else {",
+                  "            tests['Invalid Response in Actual content'] = false;",
+                  "       }",
+                  "       ",
+                  "   }",
+                  "}",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/incomingphone/listnumber.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "NumberType",
+                  "value": "all",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "pagesize",
+                  "value": "7",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "friendlyname",
+                  "value": "ktest",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "b17c9824-42bc-65c5-129e-39668831dd34",
+      "name": "Error",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "a307d8b9-afff-76df-3c59-095d89bcb6e4",
+          "name": "Error get ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}api/v2/error/get.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "errorcode",
+                  "value": "ER-M360-ADR-111",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "b6d54573-d368-2567-9a36-625b2289b39a",
+      "name": "Sign Up",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "d6d5cb14-8422-c3ae-924b-652e14122d3e",
+          "name": "Sign up",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{admin-user}}",
+                "password": "{{admin-pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/internal/user/signup.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "//Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": "",
+                "disabled": true
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic N2ZiZDMwZmEtODJkMS0wMjMyLTkyMmQtOTRhYTY0NTU0YzAyOjM2M2I1Y2VhY2VkYWY3ZDBjOWU4MGMzMGE5MmRmZDAy",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "firstname",
+                  "value": "Amit",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "lastname",
+                  "value": "sixone",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "email",
+                  "value": "amit+test{{$randomInt}}@ytel.co.in",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "password",
+                  "value": "aQ!23456",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "phonenumber",
+                  "value": "4561237890",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "countrycode",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "country",
+                  "value": "US",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "zip",
+                  "value": "456123",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "companyname",
+                  "value": "ytel",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "bc2b6582-4480-06a9-d737-55da0296a5b1",
+      "name": "SMS",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "2788b259-ebb6-c46b-5ea6-4d8c54aa6d4f",
+          "name": "Smart Sms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/sms/sendsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "to",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "FROM",
+                  "value": "2133750729",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "body",
+                  "value": "hi",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "FromCountryCode",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "ToCountryCode",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "smArtsms",
+                  "value": "true",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "messagestatuscallback",
+                  "value": "http://requestb.in/187y3uu1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "method",
+                  "value": "Post",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ed06fdd1-8731-bce5-ba10-bfcefbd4697d",
+          "name": "view sms",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/sms/viewsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "MessageSid",
+                  "value": "sssss",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "abc5fb0b-64c9-116d-9bc1-1a710dc11218",
+          "name": "google delete sms",
+          "request": {
+            "url": "{{url}}/api/v2/sms/deletecallgooglefiles.json",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "MessageSid",
+                  "value": "sssss",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "cb6d894e-df2e-0347-0c91-64d29f4142a2",
+          "name": "Inbound Sms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if(postman.getEnvironmentVariable(\"resetSmsEnvVaraible\")===undefined)  {",
+                  "    postman.clearEnvironmentVariable(\"originator\");",
+                  "",
+                  "    postman.clearEnvironmentVariable(\"receiver\");",
+                  "    ",
+                  "    postman.clearEnvironmentVariable(\"body\");",
+                  "    ",
+                  "    postman.clearEnvironmentVariable(\"time\");",
+                  "}",
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if(postman.getEnvironmentVariable(\"originator\")===undefined)  {",
+                  "    postman.setEnvironmentVariable(\"originator\", 19492080471);",
+                  "}",
+                  "if(postman.getEnvironmentVariable(\"receiver\")===undefined)  {",
+                  "    postman.setEnvironmentVariable(\"receiver\", 15612252266);",
+                  "}",
+                  "var date = new Date();",
+                  "date=date.toISOString().replace('T',' ');",
+                  "postman.setEnvironmentVariable(\"time\",date);",
+                  "console.log(date);",
+                  "postman.setEnvironmentVariable(\"body\", \"Test Inbound Sms \"+date);",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}/api/v2/sms/getinboundcallback?ORIGINATOR={{originator}}&RECEIVER={{receiver}}&BODY={{body}}&TIME={{time}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "5612252266",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "BODY",
+                  "value": "Test Sms",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "TIME",
+                  "value": "{{date}}",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "c4450321-e2ef-5b49-5ee2-dbe6b3b6b414",
+      "name": "Usage",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "bdbe093a-50a9-1037-4c5e-246fa7a5b038",
+          "name": "Usage",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var date = new Date();"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/usage/listusage.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "productcode",
+                  "value": "0",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "startdate",
+                  "value": "2017-01-01",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "enddate",
+                  "value": "2017-01-05",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "aeed2c43-6af3-62b2-c0bc-efbf9043d8dc",
+          "name": "Usage1",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var date = new Date();"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/usage1/listusage.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "productcode",
+                  "value": "0",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "startdate",
+                  "value": "2016-12-01",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "enddate",
+                  "value": "2016-12-31",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "e2332407-0b79-cf97-5997-fe06570781e4",
+      "name": "AreaMail",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "58d2edc2-e6fe-f82d-59bc-896f2cb57109",
+          "name": "Create json with url",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/carrier/lookup.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic IGM4YWJkMWFkLTEyOGMtNDJmZS03YzI5LTA5ODM5ZGQ3NTJmYyA6IGZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkzIA==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "front",
+                  "value": "https://lob.com/area_front.html",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "back",
+                  "value": "https://lob.com/area_back.html",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "routes",
+                  "value": "94107-C001,94107-C002",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "attachbyid",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "Test Description",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "targettype",
+                  "value": "all",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "htmldata",
+                  "value": "message:hi there,cooie:test",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "returntype",
+                  "value": "json",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d58adf88-5d51-3d03-00a8-d7be17a0011e",
+          "name": "Create Area Mail with files",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}api/v2/areamail/create.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "front",
+                  "type": "file",
+                  "enabled": true,
+                  "src": "area_40fdcc19ff0e4e0_front.pdf"
+                },
+                {
+                  "key": "back",
+                  "type": "file",
+                  "enabled": true,
+                  "src": "area_40fdcc19ff0e4e0_back.pdf"
+                },
+                {
+                  "key": "routes",
+                  "value": "94107-C001,94107-C002",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "attachbyid",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "Test Description",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "targettype",
+                  "value": "all",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "htmldata",
+                  "value": "message:hi there,cooie:test",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "returntype",
+                  "value": "json",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "083bc69e-8c66-4465-0992-ec55bf3a909f",
+          "name": "Create Area Mail with html",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}api/v2/areamail/create.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "front",
+                  "value": "<html> <head> <meta charset=\"UTF-8\"> <link href=\"https://fonts.googleapis.com/css?family=Open+Sans\" rel=\"stylesheet\" type=\"text/css\"> <title>Lob.com Sample Area Mail Front</title> <style>   *, *:before, *:after {     -webkit-box-sizing: border-box;     -moz-box-sizing: border-box;     box-sizing: border-box;   }    body {     width: 11.25in;     height: 6.25in;     margin: 0;     padding: 0;     /* If using an image, the background image should have dimensions of 3375x1875 pixels. */     background-image: url(https://s3-us-west-2.amazonaws.com/lob-assets/jungle.jpg);     background-size: 11.25in 6.25in;     background-repeat: no-repeat;   }    #safe-area {     position: absolute;     width: 10.875in;     height: 5.875in;     left: 0.1875in;     top: 0.1875in;     background-color: rgba(255,255,255,0.5);   }    .text {     margin: 10px;     font-family: 'Open Sans';     font-weight: 400;     font-size: 60px;     color: white;     text-shadow: 2px 2px black;   } </style> </head>  <body>   <div id=\"safe-area\">     <!-- All text should appear within the safe area. -->     <div class=\"text\">       The white box is the safe area. Do not put text outside this box.     </div>   </div> </body>  </html>",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "back",
+                  "value": "<html> <head> <meta charset=\"UTF-8\"> <link href=\"https://fonts.googleapis.com/css?family=Open+Sans\" rel=\"stylesheet\" type=\"text/css\"> <title>Lob.com Sample Area Mail Back</title> <style>   *, *:before, *:after {     -webkit-box-sizing: border-box;     -moz-box-sizing: border-box;     box-sizing: border-box;   }    body {     width: 11.25in;     height: 6.25in;     margin: 0;     padding: 0;     /* If using an image, the background image should have dimensions of 3375x1875 pixels. */     background-image: url(https://s3-us-west-2.amazonaws.com/lob-assets/jungle.jpg);     background-size: 11.25in 6.25in;     background-repeat: no-repeat;   }    #safe-area {     position: absolute;     width: 10.875in;     height: 5.875in;     left: 0.1875in;     top: 0.1875in;     background-color: rgba(255,255,255,0.5);   }    #postage-ink-free {     position: absolute;     width: 3.4in;     height: 1.05in;     left: 7.57in;     top: .28in;     background-color: white;   }    .text {     margin: 10px;     font-family: 'Open Sans';     font-weight: 400;     width: 600px;     font-size: 28px;     color: white;     text-shadow: 2px 2px black;   } </style> </head>  <body>   <div id=\"safe-area\">     <!-- All text should appear without the safe area. -->     <div class=\"text\">       The frosted white box denotes the safe area to place text. The solid white box denotes the ink-free area which must be left blank. If you are using the data argument, you can add variables like this: {{variable_name}}.     </div>   </div>    <div id=\"postage-ink-free\">     <!-- Do not place any artwork or text in the ink free area, it is reserved for postage -->   </div> </body>  </html>",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "routes",
+                  "value": "94107-C001,94107-C002",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "attachbyid",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "Test Description",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "targettype",
+                  "value": "all",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "htmldata",
+                  "value": "message:hi there,cooie:test",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "returntype",
+                  "value": "json",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a543baa8-4942-7aed-5681-90d7a8c67bcc",
+          "name": "List Address Mail",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/areamail/lists.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "pagesize",
+                  "value": "10",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "datecreated",
+                  "value": "2016-09-23",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "areamailid",
+                  "value": "area_73ac1849af916f0",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "84b4d7bd-0a4d-6081-5cfa-c695a280d99d",
+          "name": "Create Area Mail with attach by id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}api/v2/areamail/create.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "front",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "back",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "routes",
+                  "value": "94107-C001,94107-C002",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "attachbyid",
+                  "value": "area_0631513994ca582",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "description",
+                  "value": "Test Description",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "targettype",
+                  "value": "all",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "htmldata",
+                  "value": "message:hi there,cooie:test",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "returntype",
+                  "value": "json",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f14e8482-2b86-0cf1-bb60-5ef24f34aed7",
+          "name": "View",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}api/v2/areamail/View.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "areamailid",
+                  "value": "area_3918bd0f11b5597",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d934d391-6835-78e5-893c-f0bbdf0225e5",
+          "name": "Delete",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}api/v2/areamail/delete.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "areamailid",
+                  "value": "area_3918bd0f11b5597",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": "\t\t\t\t"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "f1568ab9-43a2-bc92-07ef-115f4e565a16",
+      "name": "Address",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "9c557b22-4cc1-5819-93e3-bcbb0c3cae7d",
+          "name": "Create Request",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/address/createaddress.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2Ont7cGFzc3dvcmR9fQ==",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "gjghjgj",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "address",
+                  "value": "Testname",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "state",
+                  "value": "CA",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "city",
+                  "value": "San Franisco",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "country",
+                  "value": "US",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "zip",
+                  "value": "94107",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3d332c61-9bd1-2a19-0724-a1ea2a03e437",
+          "name": "View Request",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/address/viewaddress.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "addressid",
+                  "value": "adr_86fb222c1fe9feb5",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2d774fd1-e668-8892-09bf-474f708444ce",
+          "name": "list Request",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/address/listaddress.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "addressid",
+                  "value": "adr_4af2aae3e16f46f7",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "id": "971a7b52-506a-458f-625d-74bd54d78d0f",
+              "name": "listaddress.xml",
+              "originalRequest": {
+                "auth": {
+                  "type": "basic",
+                  "basic": {
+                    "username": "{{user}}",
+                    "password": "{{pass}}",
+                    "saveHelperData": true,
+                    "showPassword": false
+                  }
+                },
+                "url": "{{url}}/api/v2/address/listaddress.json",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "addressid",
+                      "value": "adr_4af2aae3e16f46f7",
+                      "type": "text",
+                      "enabled": false
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "enabled": true
+                    }
+                  ]
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "_postman_previewtype": "html",
+              "header": [
+                {
+                  "name": "Cache-Control",
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "name": "Connection",
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "name": "Content-Encoding",
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/xml; charset=UTF-8",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "name": "Date",
+                  "key": "Date",
+                  "value": "Thu, 13 Oct 2016 04:39:55 GMT",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "name": "Keep-Alive",
+                  "key": "Keep-Alive",
+                  "value": "timeout=20",
+                  "description": "Custom header"
+                },
+                {
+                  "name": "Server",
+                  "key": "Server",
+                  "value": "nginx/1.9.2",
+                  "description": "A name for the server"
+                },
+                {
+                  "name": "Transfer-Encoding",
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "name": "Vary",
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "name": "X-Powered-By",
+                  "key": "X-Powered-By",
+                  "value": "PHP/7.0.9-pl2-gentoo",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "10251",
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Message360>\n  <ResponseStatus>1</ResponseStatus>\n  <ListInfo>\n    <TotalAddresses>57</TotalAddresses>\n    <PageSize>100</PageSize>\n    <TotalPages>1</TotalPages>\n    <PageNumber>1</PageNumber>\n  </ListInfo>\n  <Addresses>\n    <Id>adr_5424dea246d696fb</Id>\n    <Description></Description>\n    <Name>Gjghjgj Ddd</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>7798622734</Phone>\n    <Email></Email>\n    <DateCreated>2016-10-04 02:54:45</DateCreated>\n    <DateModified>2016-10-04 02:54:45</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_32c0a4903cc3da8e</Id>\n    <Description></Description>\n    <Name>Gjghjgj Jkkjds</Name>\n    <Address>Testname name</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-10-03 12:03:50</DateCreated>\n    <DateModified>2016-10-03 12:03:50</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_d70801847c82ffdf</Id>\n    <Description></Description>\n    <Name>Gjghjgj Jkkjds</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-10-03 12:03:30</DateCreated>\n    <DateModified>2016-10-03 12:03:30</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_5446f3a90e025d4e</Id>\n    <Description>Test - Home</Description>\n    <Name>Rohtas Gupta</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-29 03:04:54</DateCreated>\n    <DateModified>2016-09-29 03:04:54</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_dbb3b8a75d12a5c1</Id>\n    <Description></Description>\n    <Name>Kool</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-29 02:54:24</DateCreated>\n    <DateModified>2016-09-29 02:54:24</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_670594f6dab12479</Id>\n    <Description></Description>\n    <Name>Kool</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-29 02:54:12</DateCreated>\n    <DateModified>2016-09-29 02:54:12</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_cc0487540f60a753</Id>\n    <Description>Hi there</Description>\n    <Name>Test Name</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>15</Phone>\n    <Email>rohtas@ytel.com</Email>\n    <DateCreated>2016-09-28 04:21:34</DateCreated>\n    <DateModified>2016-09-28 04:21:34</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_6e66e7874509cffb</Id>\n    <Description>Hi there</Description>\n    <Name>Test Name</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>15</Phone>\n    <Email>rohtas@ytel.com</Email>\n    <DateCreated>2016-09-28 04:17:43</DateCreated>\n    <DateModified>2016-09-28 04:17:43</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_428c616adbac7f30</Id>\n    <Description>Hi there</Description>\n    <Name>Test Name</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>15</Phone>\n    <Email>rohtas@ytel.com</Email>\n    <DateCreated>2016-09-28 04:15:11</DateCreated>\n    <DateModified>2016-09-28 04:15:11</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_7134e9c6ccb3cd64</Id>\n    <Description>Hi there</Description>\n    <Name>Test Name</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>15</Phone>\n    <Email>rohtas@ytel.com</Email>\n    <DateCreated>2016-09-28 04:14:59</DateCreated>\n    <DateModified>2016-09-28 04:14:59</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_9407c97a198f2b9d</Id>\n    <Description></Description>\n    <Name>Gjghjgj</Name>\n    <Address>Testname</Address>\n    <City>San Franisco</City>\n    <State>CA</State>\n    <Zip>94107</Zip>\n    <Country>Aruba</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-28 03:54:18</DateCreated>\n    <DateModified>2016-09-28 03:54:18</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_6f60ece732bafb23</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 06:06:13</DateCreated>\n    <DateModified>2016-09-22 06:06:13</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_78088a801d70b26f</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:33:41</DateCreated>\n    <DateModified>2016-09-22 04:33:41</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_482ef8e62f5aab06</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:33:31</DateCreated>\n    <DateModified>2016-09-22 04:33:31</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_d6d1a9e37abb2d99</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:30:57</DateCreated>\n    <DateModified>2016-09-22 04:30:57</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_5d914560bc998239</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:30:46</DateCreated>\n    <DateModified>2016-09-22 04:30:46</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_ba588f9dc903c56c</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:30:00</DateCreated>\n    <DateModified>2016-09-22 04:30:00</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_aaf315ca513ff475</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:29:49</DateCreated>\n    <DateModified>2016-09-22 04:29:49</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_2fea1e3ea43f83be</Id>\n    <Description>TEst</Description>\n    <Name>TEST Name</Name>\n    <Address>321  Test street1</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567981</Phone>\n    <Email>rohtas@ytel.co.in</Email>\n    <DateCreated>2016-09-22 04:26:19</DateCreated>\n    <DateModified>2016-09-22 04:26:19</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_419bd59a1a8f7836</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 10:33:27</DateCreated>\n    <DateModified>2016-09-21 10:33:27</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_13af309c3786d3d0</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 10:32:29</DateCreated>\n    <DateModified>2016-09-21 10:32:29</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_5581456dc1855a14</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 10:32:06</DateCreated>\n    <DateModified>2016-09-21 10:32:06</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_9c7568a1f1a1ffe3</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 10:31:30</DateCreated>\n    <DateModified>2016-09-21 10:31:30</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_8dc237fd178dac30</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:41:28</DateCreated>\n    <DateModified>2016-09-21 09:41:28</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_b195f8de68cf755b</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:35:46</DateCreated>\n    <DateModified>2016-09-21 09:35:46</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_b5eb3fdec9e52e70</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:35:07</DateCreated>\n    <DateModified>2016-09-21 09:35:07</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_8f5895bb375380bb</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:34:38</DateCreated>\n    <DateModified>2016-09-21 09:34:38</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_310877d1c826f8a4</Id>\n    <Description>Tet - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:33:50</DateCreated>\n    <DateModified>2016-09-21 09:33:50</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_93531891efb26a66</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:32:13</DateCreated>\n    <DateModified>2016-09-21 09:32:13</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_81a7e9ec658b4a47</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:30:16</DateCreated>\n    <DateModified>2016-09-21 09:30:16</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_3322c7f653b6e05d</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:13:27</DateCreated>\n    <DateModified>2016-09-21 09:13:27</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_7fcbe8ba33a2a2fc</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:13:21</DateCreated>\n    <DateModified>2016-09-21 09:13:21</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_e4ac29374e92f49c</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:10:33</DateCreated>\n    <DateModified>2016-09-21 09:10:33</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_f018567acf58a1fb</Id>\n    <Description>Test - Home</Description>\n    <Name>Test One</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-21 09:10:25</DateCreated>\n    <DateModified>2016-09-21 09:10:25</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_43ccc25ff6c067f2</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 Test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-20 04:48:03</DateCreated>\n    <DateModified>2016-09-20 04:48:03</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_b4fc1f1185558378</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-20 04:41:36</DateCreated>\n    <DateModified>2016-09-20 04:41:36</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_6617b35481b1bc10</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email></Email>\n    <DateCreated>2016-09-20 04:25:40</DateCreated>\n    <DateModified>2016-09-20 04:25:40</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_97d23cd4aed74efb</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email></Email>\n    <DateCreated>2016-09-20 04:17:24</DateCreated>\n    <DateModified>2016-09-20 04:17:24</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_324647c3286a89c0</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email></Email>\n    <DateCreated>2016-09-20 04:17:10</DateCreated>\n    <DateModified>2016-09-20 04:17:10</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_3a00e92087d34ef8</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email></Email>\n    <DateCreated>2016-09-20 04:05:38</DateCreated>\n    <DateModified>2016-09-20 04:05:38</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_4ae474a77913163c</Id>\n    <Description></Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-20 04:05:14</DateCreated>\n    <DateModified>2016-09-20 04:05:14</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_9bb472f73dfa7631</Id>\n    <Description>Test - Home</Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-20 04:03:58</DateCreated>\n    <DateModified>2016-09-20 04:03:58</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_f7851658856f29cc</Id>\n    <Description>Test - Home</Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-20 04:03:37</DateCreated>\n    <DateModified>2016-09-20 04:03:37</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_515e751ad9e96bd0</Id>\n    <Description>Test - Home</Description>\n    <Name>Test Three</Name>\n    <Address>123 test street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-20 04:03:27</DateCreated>\n    <DateModified>2016-09-20 04:03:27</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_64b0d0c2f24c7475</Id>\n    <Description></Description>\n    <Name>TEST</Name>\n    <Address>321  Test street</Address>\n    <City>88</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-16 10:12:27</DateCreated>\n    <DateModified>2016-09-16 10:12:27</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_085111af84dfdc3d</Id>\n    <Description>Test description</Description>\n    <Name>Test Name Test</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franiscp</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 10:08:26</DateCreated>\n    <DateModified>2016-09-16 10:08:26</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_5f0b7928e10aa463</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franiscp</City>\n    <State>CA</State>\n    <Zip>3240011</Zip>\n    <Country>India</Country>\n    <Phone></Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 10:07:19</DateCreated>\n    <DateModified>2016-09-16 10:07:19</DateModified>\n    <Price>0.375</Price>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_d822f13195bbd3c5</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franiscp</City>\n    <State>CA</State>\n    <Zip>324001</Zip>\n    <Country>India</Country>\n    <Phone></Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 10:03:00</DateCreated>\n    <DateModified>2016-09-16 10:03:00</DateModified>\n    <Price>1.125</Price>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_0da9794deab38bcf</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franiscp</City>\n    <State>CA</State>\n    <Zip>94107</Zip>\n    <Country>India</Country>\n    <Phone></Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 10:02:44</DateCreated>\n    <DateModified>2016-09-16 10:02:44</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_070e4fd0c8c436f8</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franiscp</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 10:01:24</DateCreated>\n    <DateModified>2016-09-16 10:01:24</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_51eb3ed08a370c37</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 09:58:48</DateCreated>\n    <DateModified>2016-09-16 09:58:48</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_7afa7e9b4bd727e1</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone>2</Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 09:49:02</DateCreated>\n    <DateModified>2016-09-16 09:49:02</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_54b69a611e9e7b2e</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email>test@gmail.com</Email>\n    <DateCreated>2016-09-16 09:48:41</DateCreated>\n    <DateModified>2016-09-16 09:48:41</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_e041759860ba3397</Id>\n    <Description>Test description</Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-16 09:42:11</DateCreated>\n    <DateModified>2016-09-16 09:42:11</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_fd6f9a8d2075b848</Id>\n    <Description></Description>\n    <Name>Test Name</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-16 09:41:26</DateCreated>\n    <DateModified>2016-09-16 09:41:26</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_ac494363c995f40c</Id>\n    <Description>Temp description</Description>\n    <Name>Test 2</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94108</Zip>\n    <Country>United States</Country>\n    <Phone>1234567890</Phone>\n    <Email>harry@gmail.com</Email>\n    <DateCreated>2016-09-16 06:39:47</DateCreated>\n    <DateModified>2016-09-16 06:39:47</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n  <Addresses>\n    <Id>adr_10eecca9317ad1cc</Id>\n    <Description></Description>\n    <Name>Gjghjgj</Name>\n    <Address>123 Test Street</Address>\n    <City>San Franisco</City>\n    <State>California</State>\n    <Zip>94107</Zip>\n    <Country>United States</Country>\n    <Phone></Phone>\n    <Email></Email>\n    <DateCreated>2016-09-16 06:17:19</DateCreated>\n    <DateModified>2016-09-16 06:17:19</DateModified>\n    <ApiVersion>2</ApiVersion>\n  </Addresses>\n</Message360>\n"
+            }
+          ]
+        },
+        {
+          "_postman_id": "13e0180c-e5ae-1ff6-c703-7cacb020e6b3",
+          "name": "Delete Request",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "ffb10973-c00d-3b86-b35d-753396d98a33",
+                "password": "298b1cb2de2a5cb3e7ec940a25f943c2",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/address/deleteaddress.JSON",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "addressid",
+                  "value": "adr_b1b07b7237fb2866",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "9606a8cf-61bc-4c92-e703-ef7b8ce59bcc",
+          "name": "Verify Request",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/address/verifyaddress.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "addressid",
+                  "value": "adr_4af2aae3e16f46f7",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "id": "14d1d242-a0b1-8c4f-9d07-ee2b36995c2e",
+              "name": "sdds",
+              "originalRequest": {
+                "auth": {
+                  "type": "basic",
+                  "basic": {
+                    "username": "{{user}}",
+                    "password": "{{pass}}",
+                    "saveHelperData": true,
+                    "showPassword": false
+                  }
+                },
+                "url": "{{url}}/api/v2/address/verifyaddress.json",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "addressid",
+                      "value": "adr_4af2aae3e16f46f7",
+                      "type": "text",
+                      "enabled": true
+                    },
+                    {
+                      "key": "",
+                      "value": "",
+                      "type": "text",
+                      "enabled": true
+                    }
+                  ]
+                },
+                "description": ""
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "javascript",
+              "_postman_previewtype": "html",
+              "header": [
+                {
+                  "name": "Cache-Control",
+                  "key": "Cache-Control",
+                  "value": "no-cache",
+                  "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+                },
+                {
+                  "name": "Connection",
+                  "key": "Connection",
+                  "value": "keep-alive",
+                  "description": "Options that are desired for the connection"
+                },
+                {
+                  "name": "Content-Encoding",
+                  "key": "Content-Encoding",
+                  "value": "gzip",
+                  "description": "The type of encoding used on the data."
+                },
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json; charset=UTF-8",
+                  "description": "The mime type of this content"
+                },
+                {
+                  "name": "Date",
+                  "key": "Date",
+                  "value": "Thu, 13 Oct 2016 04:47:10 GMT",
+                  "description": "The date and time that the message was sent"
+                },
+                {
+                  "name": "Keep-Alive",
+                  "key": "Keep-Alive",
+                  "value": "timeout=20",
+                  "description": "Custom header"
+                },
+                {
+                  "name": "Server",
+                  "key": "Server",
+                  "value": "nginx/1.9.2",
+                  "description": "A name for the server"
+                },
+                {
+                  "name": "Transfer-Encoding",
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+                },
+                {
+                  "name": "Vary",
+                  "key": "Vary",
+                  "value": "Accept-Encoding",
+                  "description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+                },
+                {
+                  "name": "X-Powered-By",
+                  "key": "X-Powered-By",
+                  "value": "PHP/7.0.9-pl2-gentoo",
+                  "description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "1874",
+              "body": "{\n    \"Message360\": {\n        \"ResponseStatus\": 1,\n        \"Verify\": 0,\n        \"Address\": {\n            \"Id\": \"adr_5f0b7928e10aa463\",\n            \"Description\": \"Test description\",\n            \"Name\": \"Test Name\",\n            \"Address\": \"123 Test Street\",\n            \"City\": \"San Franiscp\",\n            \"State\": \"CA\",\n            \"Zip\": \"3240011\",\n            \"Country\": \"India\",\n            \"Phone\": \"\",\n            \"Email\": \"test@gmail.com\",\n            \"DateCreated\": \"2016-09-16 10:07:19\",\n            \"DateModified\": \"2016-09-16 10:07:19\",\n            \"Price\": 0.1875,\n            \"ApiVersion\": \"2\"\n        }\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
