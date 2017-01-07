@@ -1,3 +1,146 @@
 {
-    "name": "xoyal"
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Message360": {
+      "type": "object",
+      "properties": {
+        "ResponseStatus": {
+          "type": "integer"
+        },
+        "PhoneCount": {
+          "type": "integer"
+        },
+        "Page": {
+          "type": "integer"
+        },
+        "PageSize": {
+          "type": "string"
+        },
+        "Phones": {
+          "type": "object",
+          "properties": {
+            "Phone": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "AccountSid": {
+                    "type": "string"
+                  },
+                  "PhoneSid": {
+                    "type": "string"
+                  },
+                  "FriendlyName": {
+                    "type": ["string","null"] ,
+                     "optional": true
+                  },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
+                  "VoiceUrl": {
+                    "type": "string",
+                    "pattern" :"^(.+)$"  
+                  },
+                  "VoiceMethod": {
+                    "type": ["string","null"],
+                    "optional": true,
+                    "enum" : ["POST","GET"]
+                  },
+                  "VoiceFallbackUrl": {
+                     "type": ["string","null"],
+                     "minLength":0
+                  },
+                  "VoiceFallbackMethod": {
+                    "type": ["string","null"],
+                    "optional": true,
+                    "enum" : ["POST","GET"]
+                  },
+                  "DateCreated": {
+                    "type": "string",
+                    "pattern": "^(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2})$"
+                  },
+                  "DateofRenewal": {
+                     "type": ["string","null"],
+                    "optional": true,
+                    "pattern": "^(\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2})$"
+                  },
+                  "CostofRenewal": {
+                    "type": "string",
+                    "pattern": "^(\\$\\d\\.\\d)$"
+                  },
+                  "SMSRequestUrl": {
+                    "type": ["string","null"]
+                  },
+                  "SMSMethod": {
+                    "type": ["string","null"],
+                    "optional": true,
+                    "enum" : ["POST","GET"]
+                  },
+                  "SMSFallbackUrl": {
+                    "type":  ["string","null"],
+                     "optional": true
+                  },
+                  "SMSFallbackMethod": {
+                    "type": ["string","null"],
+                    "optional": true,
+                    "enum" : ["POST","GET"]
+                  },
+                  "HeartbeatUrl": {
+                   "type":  ["string","null"],
+                     "optional": true
+                  },
+                  "HeartbeatMethod": {
+                    "type": ["string","null"],
+                    "optional": true,
+                    "enum" : ["POST","GET"]
+                  },
+                  "HangupCallback": {
+                    "type":  ["string","null"],
+                     "optional": true
+                  },
+                  "HangupCallbackMethod": {
+                     "type": ["string","null"],
+                    "optional": true,
+                    "enum" : ["POST","GET"]
+                  },
+                  "VoiceEnable": {
+                    "type": "string",
+                    "enum":["true"]
+                  },
+                  "SmsEnable": {
+                    "type": "string",
+                     "enum":["true"]
+                  },
+                  "ApiVersion": {
+                    "type": "string",
+                    "enum":["2"]
+                  }
+                },
+                "required": [
+                  "AccountSid",
+                  "PhoneSid",
+                  "PhoneNumber",
+                  "ApiVersion"
+                ]
+              }
+            }
+          },
+          "required": [
+            "Phone"
+          ]
+        }
+      },
+      "required": [
+        "ResponseStatus",
+        "PhoneCount",
+        "Page",
+        "PageSize",
+        "Phones"
+      ]
+    }
+  },
+  "required": [
+    "Message360"
+  ]
 }
