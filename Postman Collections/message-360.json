@@ -1383,6 +1383,92 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "2b6a9460-b755-02c6-8448-955f7f52284f",
+          "name": "Inbound Sms copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if(postman.getEnvironmentVariable(\"resetSmsEnvVaraible\")===undefined)  {",
+                  "    postman.clearEnvironmentVariable(\"originator\");",
+                  "",
+                  "    postman.clearEnvironmentVariable(\"receiver\");",
+                  "    ",
+                  "    postman.clearEnvironmentVariable(\"body\");",
+                  "    ",
+                  "    postman.clearEnvironmentVariable(\"time\");",
+                  "}",
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if(postman.getEnvironmentVariable(\"originator\")===undefined)  {",
+                  "    postman.setEnvironmentVariable(\"originator\", 19492080471);",
+                  "}",
+                  "if(postman.getEnvironmentVariable(\"receiver\")===undefined)  {",
+                  "    postman.setEnvironmentVariable(\"receiver\", 15612252266);",
+                  "}",
+                  "var date = new Date();",
+                  "date=date.toISOString().replace('T',' ');",
+                  "console.log(date);",
+                  "postman.setEnvironmentVariable(\"body\", \"Test Inbound Sms \"+date);",
+                  "postman.setEnvironmentVariable(\"time\",date);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{url}}/api/v2/sms/getinboundcallback?ORIGINATOR={{originator}}&RECEIVER={{receiver}}&BODY={{body}}&TIME={{time}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "",
+                  "value": "5612252266",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "BODY",
+                  "value": "Test Sms",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "TIME",
+                  "value": "{{date}}",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
