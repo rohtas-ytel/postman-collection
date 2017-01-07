@@ -1532,6 +1532,108 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "a9cb403e-98e5-dd8d-9cf3-e18a14ddc5d0",
+          "name": "Smart Sms copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/sms/sendsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "to",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "FROM",
+                  "value": "2133750729",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "body",
+                  "value": "hi",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "FromCountryCode",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "ToCountryCode",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "smArtsms",
+                  "value": "true",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "messagestatuscallback",
+                  "value": "http://requestb.in/187y3uu1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "method",
+                  "value": "Post",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
