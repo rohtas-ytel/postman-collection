@@ -1383,6 +1383,43 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "2f1f66ea-7c5a-0514-c118-b91a0bd18d57",
+          "name": "view sms copy",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/sms/viewsms.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "MessageSid",
+                  "value": "sssss",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
