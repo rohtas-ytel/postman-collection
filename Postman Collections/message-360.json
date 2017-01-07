@@ -967,6 +967,125 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "6e63589e-43c9-8ae1-053a-a12020766f98",
+          "name": "ListIncoming Phone number copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var response_status = responseCode.code;",
+                  "tests['Response staus is 200'] = (response_status==200);",
+                  "if(response_status==200){",
+                  "   if(responseHeaders.hasOwnProperty(\"Content-Type\")){",
+                  "        var request_url=request['url'];",
+                  "        var extension=request_url.split('.');",
+                  "        extension= extension[extension.length-1];",
+                  "        var jsonObject;",
+                  "        var content_type = responseHeaders['Content-Type'];",
+                  "         console.log('Content_Type : '+content_type);",
+                  "        if(extension=='json') {",
+                  "         tests['Appication has Json type']=content_type.has(\"application/json\");",
+                  "         // Apllication has content valid json content",
+                  "         if(content_type.has(\"application/json\")) {",
+                  "            jsonObject = JSON.parse(responseBody); ",
+                  "         } ",
+                  "       }else if(extension=='xml') {",
+                  "           tests['Appication has Xml type']=content_type.has(\"application/xml\");",
+                  "             // Apllication has content valid xml content",
+                  "           if(content_type.has(\"application/xml\")) {",
+                  "                jsonObject = xml2Json(responseBody);",
+                  "           }",
+                  "       } ",
+                  "       if(jsonObject) {",
+                  "           if(jsonObject.Message360===undefined) {",
+                  "              tests['Invalid Response in content'] = false;",
+                  "           } else {",
+                  "                tests['Invalid Response in Message360 Valid Response'] = true;",
+                  "                var message360response= jsonObject.Message360.ResponseStatus;",
+                  "                if(message360response) {",
+                  "                    tests['Message Response Status == 1'] =(message360response==1);",
+                  "                    // Do Basic coding",
+                  "                    PhoneCount = jsonObject.Message360.PhoneCount;",
+                  "                    Phones     = jsonObject.Message360.Phones.Phone;",
+                  "                    tests['Number length match '] = (PhoneCount==Phones.length); ",
+                  "                } else {",
+                  "                    tests['Message Response Status == 0'] =(message360response===0);     // Do Message fail validation",
+                  "                    var schema = {\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"Message360\":{\"type\":\"object\",\"properties\":{\"ResponseStatus\":{\"type\":\"integer\"},\"Errors\":{\"type\":\"object\",\"properties\":{\"Error\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"Code\":{\"type\":\"string\"},\"Message\":{\"type\":\"string\"},\"MoreInfo\":{\"type\":\"array\",\"items\":{}}},\"required\":[\"Code\",\"Message\",\"MoreInfo\"]}}},\"required\":[\"Error\"]}},\"required\":[\"ResponseStatus\",\"Errors\"]}},\"required\":[\"Message360\"]};",
+                  "                      var schema_validate= tv4.validate(jsonObject, schema);",
+                  "                     tests[\"schema Error validated\"] = schema_validate;  ",
+                  "                }",
+                  "                // Do end testing coding",
+                  "           }",
+                  "       } else {",
+                  "            tests['Invalid Response in Actual content'] = false;",
+                  "       }",
+                  "       ",
+                  "   }",
+                  "}",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/incomingphone/listnumber.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "NumberType",
+                  "value": "all",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "pagesize",
+                  "value": "7",
+                  "type": "text",
+                  "enabled": false
+                },
+                {
+                  "key": "friendlyname",
+                  "value": "ktest",
+                  "type": "text",
+                  "enabled": false
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
