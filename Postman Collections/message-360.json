@@ -1470,18 +1470,18 @@
             "auth": {
               "type": "basic",
               "basic": {
-                "username": "{{user}}",
-                "password": "{{pass}}",
+                "username": "{{kallace_user}}",
+                "password": "{{kallace_pass}}",
                 "saveHelperData": true,
                 "showPassword": false
               }
             },
-            "url": "{{url}}/api/v2/usage1/listusage.json",
+            "url": "{{url}}/api/v2/usage/listusage.json",
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
+                "value": "Basic ZmFiNGY4MTktMWM3Mi1kNTlhLTE5OTgtMzE3MzIyYmRkY2UwOjJkNjMzZmEyMTA2NjIwZTk3YzI5OWNlMzMwYzViNTBk",
                 "description": ""
               }
             ],
