@@ -1470,8 +1470,8 @@
             "auth": {
               "type": "basic",
               "basic": {
-                "username": "{{kallace_user}}",
-                "password": "{{kallace_pass}}",
+                "username": "{{amit_user}}",
+                "password": "{{amit_pass}}",
                 "saveHelperData": true,
                 "showPassword": false
               }
@@ -1481,7 +1481,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Basic ZmFiNGY4MTktMWM3Mi1kNTlhLTE5OTgtMzE3MzIyYmRkY2UwOjJkNjMzZmEyMTA2NjIwZTk3YzI5OWNlMzMwYzViNTBk",
+                "value": "Basic NjRhYzIyNmItY2ViYS01ZDhlLTlhMWMtZTM5NjMxMTI2MGFkOmVmNzRiNWJiOTAwYjljNTgwZjgzYzdlNjgwZGFlZjM5",
                 "description": ""
               }
             ],
@@ -1490,19 +1490,19 @@
               "formdata": [
                 {
                   "key": "productcode",
-                  "value": "0",
+                  "value": "6",
                   "type": "text",
                   "enabled": true
                 },
                 {
                   "key": "startdate",
-                  "value": "2016-12-01",
+                  "value": "2016-08-01",
                   "type": "text",
                   "enabled": true
                 },
                 {
                   "key": "enddate",
-                  "value": "2016-12-31",
+                  "value": "2016-08-31",
                   "type": "text",
                   "enabled": true
                 }
