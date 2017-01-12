@@ -71,6 +71,66 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "2a342d15-bf58-2aa4-9a3c-0abb9655ab76",
+          "name": "lookup copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var schema = {",
+                  " \"items\": {",
+                  " \"type\": \"boolean\"",
+                  " }",
+                  "};",
+                  "var data1 = [true, false];",
+                  "var data2 = [true, 123];",
+                  "",
+                  "tests[\"Valid Data1\"] = tv4.validate(data1, schema);",
+                  "tests[\"Valid Data2\"] = tv4.validate(data2, schema);",
+                  "console.log(\"Validation failed: \", tv4.error);",
+                  "",
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v2/carrier/lookup.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOiBmY2RjMGRjZGNiNjAzZjA3ZDE3MTE1YzFmODc5ZTQ5MyA=",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "phonenumber",
+                  "value": "9492080471",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
