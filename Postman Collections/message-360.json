@@ -467,8 +467,8 @@
                   "enabled": true
                 },
                 {
-                  "key": "data[product]",
-                  "value": "a",
+                  "key": "data[]",
+                  "value": "{product}:a,{companyname}:b,{code}:c",
                   "type": "text",
                   "enabled": true
                 },
