@@ -456,67 +456,6 @@
             "description": ""
           },
           "response": []
-        },
-        {
-          "_postman_id": "abaf54db-d746-c01e-5217-9d527392c6a1",
-          "name": "List Template copy",
-          "request": {
-            "auth": {
-              "type": "basic",
-              "basic": {
-                "username": "{{user}}",
-                "password": "{{pass}}",
-                "saveHelperData": true,
-                "showPassword": false
-              }
-            },
-            "url": "{{url}}/api/v2/template/lists.json",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Basic YzhhYmQxYWQtMTI4Yy00MmZlLTdjMjktMDk4MzlkZDc1MmZjOmZjZGMwZGNkY2I2MDNmMDdkMTcxMTVjMWY4NzllNDkz",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "page",
-                  "value": "1",
-                  "type": "text",
-                  "enabled": false
-                },
-                {
-                  "key": "pagesize",
-                  "value": "1",
-                  "type": "text",
-                  "enabled": false
-                },
-                {
-                  "key": "",
-                  "value": "",
-                  "type": "text",
-                  "enabled": false
-                },
-                {
-                  "key": "",
-                  "value": "",
-                  "type": "text",
-                  "enabled": false
-                },
-                {
-                  "key": "",
-                  "value": "",
-                  "type": "text",
-                  "enabled": false
-                }
-              ]
-            },
-            "description": ""
-          },
-          "response": []
         }
       ]
     },
