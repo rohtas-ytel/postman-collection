@@ -491,13 +491,13 @@
               "formdata": [
                 {
                   "key": "shortcode",
-                  "value": "69677",
+                  "value": "411411",
                   "type": "text",
                   "enabled": true
                 },
                 {
                   "key": "templateid",
-                  "value": "687b2c80-dd4a-11e6-817a-db5d3f648156",
+                  "value": "009cd5f0-fd9d-11e6-817a-db5d3f648156",
                   "type": "text",
                   "enabled": true
                 },
@@ -520,22 +520,16 @@
                   "enabled": true
                 },
                 {
-                  "key": "data[]",
-                  "value": "{product}:a,{companyname}:b,{code}:c",
+                  "key": "data",
+                  "value": "{LINK}:http://requestb.in/1kx8obh1",
                   "type": "text",
                   "enabled": false
                 },
                 {
-                  "key": "data[companyname]",
-                  "value": "b",
+                  "key": "data[LINK]",
+                  "value": "http://requestb.in/1kx8obh1",
                   "type": "text",
-                  "enabled": false
-                },
-                {
-                  "key": "data[price]",
-                  "value": "v",
-                  "type": "text",
-                  "enabled": false
+                  "enabled": true
                 },
                 {
                   "key": "data[code]",
