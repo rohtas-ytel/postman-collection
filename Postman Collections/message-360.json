@@ -348,7 +348,7 @@
                 "showPassword": false
               }
             },
-            "url": "{{url}}/api/v2/template/lists.json",
+            "url": "{{url}}/api/v2/template/lists.xml",
             "method": "POST",
             "header": [
               {
@@ -364,29 +364,29 @@
                   "key": "page",
                   "value": "1",
                   "type": "text",
-                  "enabled": false
+                  "enabled": true
                 },
                 {
                   "key": "pagesize",
-                  "value": "1",
+                  "value": "10",
+                  "type": "text",
+                  "enabled": true
+                },
+                {
+                  "key": "TemplateId",
+                  "value": "687b2c80-dd4a-11e6-817a-db5d3f648156",
                   "type": "text",
                   "enabled": false
                 },
                 {
-                  "key": "",
-                  "value": "",
+                  "key": "Shortcode",
+                  "value": "69677",
                   "type": "text",
                   "enabled": false
                 },
                 {
-                  "key": "",
-                  "value": "",
-                  "type": "text",
-                  "enabled": false
-                },
-                {
-                  "key": "",
-                  "value": "",
+                  "key": "Type",
+                  "value": "Marketing",
                   "type": "text",
                   "enabled": false
                 }
