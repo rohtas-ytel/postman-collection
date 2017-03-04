@@ -294,6 +294,11 @@
                 "key": "Authorization",
                 "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
                 "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded",
+                "description": ""
               }
             ],
             "body": {
@@ -303,7 +308,7 @@
                   "key": "templateid",
                   "value": "687b2c80-dd4a-11e6-817a-db5d3f648156",
                   "type": "text",
-                  "enabled": false
+                  "enabled": true
                 },
                 {
                   "key": "templateid",
@@ -319,7 +324,7 @@
                 },
                 {
                   "key": "TemplateId",
-                  "value": "Hellp",
+                  "value": "Help",
                   "type": "text",
                   "enabled": false
                 },
