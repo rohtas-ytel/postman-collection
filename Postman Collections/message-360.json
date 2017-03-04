@@ -348,7 +348,7 @@
                 "showPassword": false
               }
             },
-            "url": "{{url}}/api/v2/template/lists.xml",
+            "url": "{{url}}/api/v2/template/lists.json",
             "method": "POST",
             "header": [
               {
@@ -386,9 +386,15 @@
                 },
                 {
                   "key": "Type",
-                  "value": "Marketing",
+                  "value": "Authorization",
                   "type": "text",
                   "enabled": false
+                },
+                {
+                  "key": "Type",
+                  "value": "Marketing",
+                  "type": "text",
+                  "enabled": true
                 }
               ]
             },
