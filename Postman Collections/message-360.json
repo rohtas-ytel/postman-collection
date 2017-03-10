@@ -1796,7 +1796,7 @@
               "type": "basic",
               "basic": {
                 "username": "8697ac95-3678-7e34-d203-e6dd57460abc",
-                "password": "{{pass}}",
+                "password": "557c8d100fa4f13119b106d110ec438a",
                 "saveHelperData": true,
                 "showPassword": false
               }
@@ -1806,7 +1806,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Basic ZmZiMTA5NzMtYzAwZC0zYjg2LWIzNWQtNzUzMzk2ZDk4YTMzOjI5OGIxY2IyZGUyYTVjYjNlN2VjOTQwYTI1Zjk0M2My",
+                "value": "Basic ODY5N2FjOTUtMzY3OC03ZTM0LWQyMDMtZTZkZDU3NDYwYWJjOjU1N2M4ZDEwMGZhNGYxMzExOWIxMDZkMTEwZWM0Mzhh",
                 "description": ""
               }
             ],
