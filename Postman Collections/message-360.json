@@ -1795,7 +1795,7 @@
             "auth": {
               "type": "basic",
               "basic": {
-                "username": "{{user}}",
+                "username": "8697ac95-3678-7e34-d203-e6dd57460abc",
                 "password": "{{pass}}",
                 "saveHelperData": true,
                 "showPassword": false
