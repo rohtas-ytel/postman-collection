@@ -16,7 +16,7 @@
           "_postman_id": "3038fd10-5fea-a0fd-0173-b477946982f7",
           "name": "Generate Error ",
           "request": {
-            "url": "{{url}}/cron/v2/updatetotalfund/eehckEsbeUJ74y97eehckEs",
+            "url": "{{url}}/cron/v2/paymentautorechargev3/eehckEsbeUJ74y97eehckEs",
             "method": "GET",
             "header": [
               {
