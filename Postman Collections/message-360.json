@@ -1614,8 +1614,8 @@
             "auth": {
               "type": "basic",
               "basic": {
-                "username": "{{amit_user}}",
-                "password": "{{amit_pass}}",
+                "username": "{{user}}",
+                "password": "{{pass}}",
                 "saveHelperData": true,
                 "showPassword": false
               }
@@ -1625,7 +1625,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "Basic NjRhYzIyNmItY2ViYS01ZDhlLTlhMWMtZTM5NjMxMTI2MGFkOmVmNzRiNWJiOTAwYjljNTgwZjgzYzdlNjgwZGFlZjM5",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
                 "description": ""
               }
             ],
@@ -1636,19 +1636,19 @@
                   "key": "productcode",
                   "value": "6",
                   "type": "text",
-                  "enabled": true
+                  "enabled": false
                 },
                 {
                   "key": "startdate",
                   "value": "2016-08-01",
                   "type": "text",
-                  "enabled": true
+                  "enabled": false
                 },
                 {
                   "key": "enddate",
                   "value": "2016-08-31",
                   "type": "text",
-                  "enabled": true
+                  "enabled": false
                 }
               ]
             },
