@@ -1560,7 +1560,7 @@
                 "showPassword": false
               }
             },
-            "url": "{{url}}/api/v2/usage/listusage.json",
+            "url": "{{url}}/api/v3/usage/listusage.json",
             "method": "POST",
             "header": [
               {
