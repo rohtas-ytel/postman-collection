@@ -940,6 +940,43 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "6f2dfe5d-37c8-ecb8-ff8b-aa1fcbb46324",
+          "name": "View Accounts V3",
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{user}}",
+                "password": "{{pass}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "url": "{{url}}/api/v3/accounts/viewaccount.json",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2JjNmEwYjUtYzExMy1hNmU0LTRmOTYtNTMzNjZhN2M5OTY2OjU5NjRkNWRlMDc0MDg0ODk0ZmY1N2Y3NzcxYjI5NmMz",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "date",
+                  "value": "2017-04-04",
+                  "type": "text",
+                  "enabled": true
+                }
+              ]
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     },
