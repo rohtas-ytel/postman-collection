@@ -1510,7 +1510,7 @@
                   "    postman.setEnvironmentVariable(\"originator\", 19492080471);",
                   "}",
                   "if(postman.getEnvironmentVariable(\"receiver\")===undefined)  {",
-                  "    postman.setEnvironmentVariable(\"receiver\", '69677');",
+                  "    postman.setEnvironmentVariable(\"receiver\", '12133750729');",
                   "}",
                   "var date = new Date();",
                   "date=date.toISOString().replace('T',' ');",
